@@ -17,8 +17,15 @@ namespace HPlusSport.API.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Product> GetAllProducts() {
-            return _context.Products.ToArray();
+        public IActionResult GetAllProducts() {
+            return Ok(_context.Products.ToArray());
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult GetProduct(int id)
+        {
+            var product = _context.Products.Find(id);
+            return Ok(product);
         }
 
     }
