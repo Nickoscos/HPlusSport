@@ -5,5 +5,7 @@ Retourne une liste de produits :
 - liste complète
 - produit unique
 - pagination
+- Tri des articles
+- recherche par termes
 
 API asyncrhone et gestion des erreurs
